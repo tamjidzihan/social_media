@@ -1,12 +1,11 @@
 import { Search } from "lucide-react";
 
 interface HeaderProps {
-    searchQuery: string;
     onSearchChange: (query: string) => void;
     onHeaderClick: () => void;
 }
 
-export function Header({ searchQuery, onSearchChange, onHeaderClick }: HeaderProps) {
+export function Header({ onSearchChange, onHeaderClick }: HeaderProps) {
     return (
         <header className="bg-white shadow-sm">
             <div className="container-fluid py-3">
@@ -25,7 +24,6 @@ export function Header({ searchQuery, onSearchChange, onHeaderClick }: HeaderPro
                                 type="search"
                                 className="form-control border-start-0"
                                 placeholder="Search posts..."
-                                value={searchQuery}
                                 onChange={(e) => onSearchChange(e.target.value)}
                             />
                         </div>
