@@ -13,7 +13,11 @@ const App = () => {
   }
   return (
     <div className="min-h-screen bg-light">
-      <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} onHeaderClick={handleHeaderClick} />
+      <Header
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        onHeaderClick={handleHeaderClick}
+      />
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3 p-4">
